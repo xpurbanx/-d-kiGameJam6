@@ -18,7 +18,16 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+    }
+
+    void MoveHorizontally()
+    {
         transform.Translate(horizontalValue*0.001f*(speed*2500f)*Time.deltaTime,0,0);
-        transform.Translate(0,verticalValue * 0.001f * (speed * 2500f) * Time.deltaTime, 0);
+    }
+
+    void MoveVertically()
+    {
+        transform.Translate(0, verticalValue * 0.001f * (speed * 2500f) * Time.deltaTime, 0);
     }
 }
