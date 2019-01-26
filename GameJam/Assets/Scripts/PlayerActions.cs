@@ -26,6 +26,8 @@ public class PlayerActions : MonoBehaviour
             pickedItem.transform.localScale = new Vector3(pickedItem.transform.localScale.x * 0.7f, pickedItem.transform.localScale.y * 0.7f, 0);
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().noShadow;
             isPicked = true;
+            pickedItem.GetComponent<Item>().isPicked = true;
+            pickedItem.GetComponent<Item>().isDropped = false;
             timePassed = 0f;
         }
     }
@@ -37,6 +39,8 @@ public class PlayerActions : MonoBehaviour
             pickedItem.transform.position = gameObject.transform.position - dropItem;
             pickedItem.transform.localScale = new Vector3(pickedItem.transform.localScale.x * (1f/0.7f), pickedItem.transform.localScale.y * (1f / 0.7f), 0);
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
+            pickedItem.GetComponent<Item>().isPicked = false;
+            pickedItem.GetComponent<Item>().isDropped = true;
             pickedItem = null;
             isPicked = false;
             timePassed = 0f;
