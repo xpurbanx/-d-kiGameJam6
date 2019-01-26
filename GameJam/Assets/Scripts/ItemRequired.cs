@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HouseState : MonoBehaviour
+public class ItemRequired : MonoBehaviour
 {
+    List<List<string>> itemsForLevel;
 
-    public int level;
-    public int score;
+    //List<string> 
     // Start is called before the first frame update
     void Start()
     {
