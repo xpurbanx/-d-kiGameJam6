@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemScore : MonoBehaviour
+public class ItemScore : HouseState
 {
     public int score;
 
