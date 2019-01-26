@@ -332,10 +332,13 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
 =======
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
   m_SortingLayerID: -540478221
   m_SortingLayer: 2
   m_SortingOrder: 1
@@ -602,10 +605,13 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
 =======
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
   m_SortingLayerID: 1931608289
   m_SortingLayer: 1
   m_SortingOrder: 0
@@ -29426,6 +29432,7 @@ PrefabInstance:
       objectReference: {fileID: 1070772572}
     m_RemovedComponents:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 2825454297210929883, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
     - {fileID: 1951754135209247392, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
     - {fileID: 958663305310891096, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
@@ -29433,6 +29440,10 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 5111000071783699213, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
 >>>>>>> Player Collisions
+=======
+    - {fileID: 0}
+    - {fileID: 5111000071783699213, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
   m_SourcePrefab: {fileID: 100100000, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
 --- !u!1001 &5279948113702338893
 PrefabInstance:
@@ -29502,6 +29513,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 5373775037973457574, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29517,11 +29529,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.41406018
 =======
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
     - target: {fileID: 5279948112799291945, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
       propertyPath: m_Material
       value: 
+<<<<<<< HEAD
 >>>>>>> Player Collisions
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
       objectReference: {fileID: 0}
     - target: {fileID: 5279948112799291944, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
@@ -29530,6 +29547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279948112799291944, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
       propertyPath: m_Offset.x
       value: 0
@@ -29549,6 +29567,8 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.18
 =======
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -29556,7 +29576,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+<<<<<<< HEAD
 >>>>>>> Player Collisions
+=======
+>>>>>>> 9ee2f1debb8e6bf52e2ca5c75040bf7c12ef8a1d
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1653862243858616057, guid: 323dba5f8bbac834e83785e9bb38a360, type: 3}
