@@ -19,9 +19,9 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &5111000071783699213
+--- !u!61 &8142854129676754465
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,7 +34,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23, y: 0.23}
+  m_Offset: {x: -0.23081619, y: 0.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.47}
+  m_Size: {x: 0.1003216, y: 0.1158293}
   m_EdgeRadius: 0
 --- !u!114 &5111000071783699201
 MonoBehaviour:
@@ -328,6 +328,39 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 3558297589370526445, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558297589370526445, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558297589370526445, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.231
+      objectReference: {fileID: 0}
+    - target: {fileID: 672745136252546285, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672745136252546285, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -898887701
+      objectReference: {fileID: 0}
+    - target: {fileID: 672745136252546285, guid: d661d25459d83b54083b59e2d9dc9f35,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+>>>>>>> Player Collisions
     m_RemovedComponents:
     - {fileID: 1134984467019184086, guid: d661d25459d83b54083b59e2d9dc9f35, type: 3}
     - {fileID: 4629886683183600527, guid: d661d25459d83b54083b59e2d9dc9f35, type: 3}

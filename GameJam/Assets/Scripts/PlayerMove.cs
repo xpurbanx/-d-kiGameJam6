@@ -25,6 +25,16 @@ public class PlayerMove : MonoBehaviour
         verticalValue = playerInput.Vertical();
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        float divider = 5f;
+        if (collision.gameObject.tag == "Player 1" || collision.gameObject.tag == "Player 2")
+        {
+            speed = speed / divider;
+        }
+        else speed = divider;
+    }
+
     void FixedUpdate()
     {
         MoveHorizontally();
