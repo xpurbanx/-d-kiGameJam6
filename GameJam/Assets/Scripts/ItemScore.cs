@@ -17,10 +17,13 @@ public class ItemScore : HouseState
 
                 foreach (GameObject item in gameObject.GetComponent<HouseState>().itemsToLvl)
                 {
-                    if (item.name + "(Clone)" == pickedObject.name)
+                    if (pickedObject != null)
                     {
-                        index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
-                        isRequired = true;
+                        if (item.name + "(Clone)" == pickedObject.name)
+                        {
+                            index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
+                            isRequired = true;
+                        }
                     }
                 }
 
@@ -38,10 +41,27 @@ public class ItemScore : HouseState
             if (collision.tag == "Player 2")
             {
                 GameObject pickedObject = GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem;
-                if (gameObject.GetComponent<HouseState>().itemsToLvl.Contains(pickedObject))
+                bool isRequired = false;
+                int index = 0;
+
+                foreach (GameObject item in gameObject.GetComponent<HouseState>().itemsToLvl)
                 {
-                    gameObject.GetComponent<HouseState>().itemsToLvl.Remove(pickedObject);
+                    if (pickedObject != null)
+                    {
+                        if (item.name + "(Clone)" == pickedObject.name)
+                        {
+                            index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
+                            isRequired = true;
+                        }
+                    }
+                }
+
+                if (isRequired)
+                {
+                    gameObject.GetComponent<HouseState>().itemsToLvl.RemoveAt(index);
+                    GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem = null;
                     Destroy(pickedObject);
+                    isRequired = false;
                 }
             }
         }

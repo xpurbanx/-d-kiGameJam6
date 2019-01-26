@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -8,8 +7,8 @@ public class HouseState : MonoBehaviour
     private List<GameObject> itemType;
     [HideInInspector]
     public List<GameObject> itemsToLvl = new List<GameObject>();
-    private int level;
-    private int score;
+    private int level = 1;
+    private int score = 1;
 
     void Start()
     {
@@ -28,7 +27,7 @@ public class HouseState : MonoBehaviour
 
     void LevelUp()
     {
-        level = level++;
+        level = level + 1;
     }
 
     void RequiredItemList(int level)
