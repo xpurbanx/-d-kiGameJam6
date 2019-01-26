@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ItemsSpawning : MonoBehaviour
+public class ItemsManagement : MonoBehaviour
 {
     public GameObject[] itemType;
+    public static bool isPicked;
+
     private float mapX;
     private float mapY;
 

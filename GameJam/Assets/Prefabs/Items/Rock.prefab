@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5466474979946231080}
   - component: {fileID: 5466474979946231081}
   - component: {fileID: 4403642110967232309}
-  - component: {fileID: 1133741597131706079}
   - component: {fileID: 8817050238324703884}
   m_Layer: 0
   m_Name: Rock
@@ -108,27 +107,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12364368, y: 0.099348426}
   m_EdgeRadius: 0
---- !u!50 &1133741597131706079
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5466474979946231082}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &8817050238324703884
 MonoBehaviour:
   m_ObjectHideFlags: 0

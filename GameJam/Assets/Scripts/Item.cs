@@ -1,21 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public static bool itemColliding;
+    public static GameObject collidingItem;
+    public static GameObject pickedItem;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);      
-    }
+    public static bool isColliding;
 
-    void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            itemColliding = false;
+            isColliding = true;
+            collidingItem = gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            isColliding = false;
+            collidingItem = null;
         }
     }
 }
