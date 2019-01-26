@@ -10,8 +10,10 @@ public class ItemRequired : MonoBehaviour
     public List<List<string>> itemsForLevel;
     public List<GameObject> allItems;
     private List<GameObject> shuffledList = new List<GameObject>();
-    private List<GameObject> itemsSide1 = new List<GameObject>();
-    private List<GameObject> itemsSide2 = new List<GameObject>();
+    [HideInInspector]
+    public List<GameObject> itemsSide1 = new List<GameObject>();
+    [HideInInspector]
+    public List<GameObject> itemsSide2 = new List<GameObject>();
 
 
     private void Awake()
