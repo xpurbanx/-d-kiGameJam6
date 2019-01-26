@@ -294,8 +294,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -540478221
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -558,8 +558,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1931608289
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -29454,7 +29454,7 @@ PrefabInstance:
     - target: {fileID: 5111000070247703665, guid: 8184b83e829fc144c8b29750d5298b78,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.41
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5111000070247703665, guid: 8184b83e829fc144c8b29750d5298b78,
         type: 3}
@@ -29517,7 +29517,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2825454297210929883, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
+    - {fileID: 0}
+    - {fileID: 5111000071783699213, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8184b83e829fc144c8b29750d5298b78, type: 3}
 --- !u!1001 &5279948113702338893
 PrefabInstance:
@@ -29586,10 +29587,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5279948112799291945, guid: 323dba5f8bbac834e83785e9bb38a360,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5279948112799291944, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279948112799291944, guid: 323dba5f8bbac834e83785e9bb38a360,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 993402830190548081, guid: 323dba5f8bbac834e83785e9bb38a360,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1653862243858616057, guid: 323dba5f8bbac834e83785e9bb38a360, type: 3}
