@@ -7,7 +7,7 @@ public class PlayerActions : MonoBehaviour
     private GameObject pickedItem;
     private PlayerInput playerInput;
     private Vector3 dropItem = new Vector3(1f, 1f, 0f);
-    private Vector3 offset = new Vector3(3.2f, 3.5f, 0f);
+    private Vector3 offset = new Vector3(1.3f, 1f, 0f);
     private bool isPicked;
     private float timePassed = 0f;
     private float keyDelay = 0.5f;
@@ -58,7 +58,7 @@ public class PlayerActions : MonoBehaviour
     {
         if (isPicked && pickedItem != null)
         {
-            pickedItem.transform.position = player.transform.localPosition + offset;
+            pickedItem.transform.position = player.transform.position + offset;
         }
     }
 }
