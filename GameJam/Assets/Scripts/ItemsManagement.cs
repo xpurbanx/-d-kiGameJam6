@@ -22,11 +22,18 @@ public class ItemsManagement : MonoBehaviour
         for (int i = 0; i < 16; i++)
         {
             randomItemType = Random.Range(0, 11);
-            float x = Random.Range(-mapX/2, mapX/2);
-            float y = Random.Range(-mapY/2, mapY/2);
+            float x = Random.Range(-mapX / 2, mapX / 2);
+            float y = Random.Range(-mapY / 2, mapY / 2);
             GameObject item = Instantiate(itemType[randomItemType]);
 
             item.transform.position = new Vector2(x, y);
+
+            if (item.GetComponent<Collider2D>().IsTouchingLayers(10))
+            {
+                x = Random.Range(-mapX / 2, mapX / 2);
+                y = Random.Range(-mapY / 2, mapY / 2);
+                item.transform.position = new Vector2(x, y);
+            }
         }
     }
 }
