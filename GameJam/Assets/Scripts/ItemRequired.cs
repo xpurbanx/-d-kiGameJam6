@@ -9,6 +9,7 @@ public class ItemRequired : MonoBehaviour
 
     public List<List<string>> itemsForLevel;
     public List<GameObject> allItems;
+    public List<GameObject> usableItems;
     [HideInInspector]
     public List<GameObject> itemsSide1 = new List<GameObject>();
     [HideInInspector]
