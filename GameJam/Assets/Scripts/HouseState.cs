@@ -10,7 +10,7 @@ public class HouseState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ItemRequired.Instance.printLists();
     }
 
     // Update is called once per frame
