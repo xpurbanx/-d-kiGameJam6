@@ -43,6 +43,7 @@ public class PlayerMove : MonoBehaviour
             r.sortingOrder = 100;
         }
     }
+    public Vector3 forward;
 
     void FixedUpdate()
     {
@@ -56,12 +57,21 @@ public class PlayerMove : MonoBehaviour
         animator.SetFloat("HorizontalSpeed", Mathf.Abs(horizontalValue));
 
         if (horizontalValue > 0f)
+        {
             animator.SetBool("WalksRight", true);
+            forward = new Vector3(1, 0, 0);
+
+        }
+            
         else
             animator.SetBool("WalksRight", false);
         ///////////////////////////////////////
         if (horizontalValue < 0f)
+        {
             animator.SetBool("WalksLeft", true);
+            forward = new Vector3(-1, 0, 0);
+        }
+            
         else
             animator.SetBool("WalksLeft", false);
     }
@@ -72,12 +82,20 @@ public class PlayerMove : MonoBehaviour
         animator.SetFloat("VerticalSpeed", Mathf.Abs(verticalValue));
 
         if (verticalValue > 0f)
+        {
             animator.SetBool("WalksUp", true);
+            forward = new Vector3(0, 1, 0);
+        }
+            
         else
             animator.SetBool("WalksUp", false);
         ///////////////////////////////////////
         if (verticalValue < 0f)
+        {
             animator.SetBool("WalksDown", true);
+            forward = new Vector3(0, -1, 0);
+        }
+            
         else
             animator.SetBool("WalksDown", false);
     }
