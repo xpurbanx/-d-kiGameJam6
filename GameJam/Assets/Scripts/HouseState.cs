@@ -6,7 +6,8 @@ using UnityEngine;
 public class HouseState : MonoBehaviour
 {
     private List<GameObject> itemType;
-    public List<GameObject> itemsToLvl;
+    [HideInInspector]
+    public List<GameObject> itemsToLvl = new List<GameObject>();
     private int level;
     private int score;
 
@@ -32,7 +33,7 @@ public class HouseState : MonoBehaviour
 
     void RequiredItemList(int level)
     {
-        itemType = GameObject.Find("Item Manager").GetComponent<ItemsManagement>().itemType;
+        itemType = GameObject.Find("Item Manager").GetComponent<SpawningItems>().itemType;
 
         if (level < 6)
         {
@@ -59,6 +60,11 @@ public class HouseState : MonoBehaviour
                 int randomItemType = Random.Range(0, 11);
                 itemsToLvl.Add(itemType[randomItemType]);
             }
+        }
+
+        foreach (GameObject item in itemsToLvl)
+        {
+            Debug.Log(item);
         }
     }
 }
