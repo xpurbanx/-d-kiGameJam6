@@ -10,10 +10,17 @@ public class PlayerMove : MonoBehaviour
     float horizontalValue = 0f;
     float verticalValue = 0f;
 
+    private PlayerInput playerInput;
+
+    private void Start()
+    {
+        playerInput = GetComponent<PlayerInput>();
+    }
     void Update()
     {
-        horizontalValue = Input.GetAxisRaw("Horizontal");
-        verticalValue = Input.GetAxisRaw("Vertical");
+        
+        horizontalValue = playerInput.Horizontal();
+        verticalValue = playerInput.Vertical();
     }
 
     void FixedUpdate()
