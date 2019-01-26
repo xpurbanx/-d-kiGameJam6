@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 53978820}
+  pickedItem: {fileID: 0}
 --- !u!1 &220592223
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +985,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11471081, y: -0.3620566}
+  m_Offset: {x: -0.0051231384, y: -0.3946041}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -995,7 +996,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34080434, y: 0.097043514}
+  m_Size: {x: 0.58047223, y: 0.16213843}
   m_EdgeRadius: 0
 --- !u!1 &1769549228
 GameObject:
