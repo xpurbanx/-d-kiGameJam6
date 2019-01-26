@@ -72,8 +72,8 @@ public class ItemRequired : MonoBehaviour
             bool looping = true;
             while (looping == true)
             {
-                float x = Random.Range(-mapX / 2, 0);
-                float y = Random.Range(-mapY / 2, mapY / 2);
+                float x = Random.Range(-mapX / 2 +2.7f, -2.7f);
+                float y = Random.Range(-mapY / 2 + 6f, mapY / 2);
 
                 // CZĘŚĆ MICHAŁA: DETEKCJA KOLIZJI PRZY SPAWNIE PRZEDMIOTU
 
@@ -103,8 +103,8 @@ public class ItemRequired : MonoBehaviour
             bool looping = true;
             while (looping == true)
             {
-                float x = Random.Range(0, mapX / 2);
-                float y = Random.Range(-mapY / 2, mapY / 2);
+                float x = Random.Range(2.7f, mapX / 2 - 2.7f);
+                float y = Random.Range(-mapY / 2 + 6f, mapY / 2);
 
                 // CZĘŚĆ MICHAŁA: DETEKCJA KOLIZJI PRZY SPAWNIE PRZEDMIOTU
 

@@ -32781,7 +32781,7 @@ MonoBehaviour:
   - {fileID: 448237678597107897, guid: 5db3bebb2e23e1546933eb0525b908cd, type: 3}
   itemsSide1: []
   itemsSide2: []
-  numberOfItems: 1000
+  numberOfItems: 24
 --- !u!1 &1127811665
 GameObject:
   m_ObjectHideFlags: 0
