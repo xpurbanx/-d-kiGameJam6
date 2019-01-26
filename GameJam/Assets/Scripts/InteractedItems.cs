@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class InteractedItems : MonoBehaviour
 {
-    public static List<GameObject> currentCollisions = new List<GameObject>();
-    public static bool isColliding;
+    public List<GameObject> currentCollisions = new List<GameObject>();
+    public bool isColliding;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
