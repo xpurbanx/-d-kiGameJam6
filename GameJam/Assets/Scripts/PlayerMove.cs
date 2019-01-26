@@ -19,20 +19,29 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        //horizontalValue = Input.GetAxisRaw("Horizontal");
-        //verticalValue = Input.GetAxisRaw("Vertical");
+        
         horizontalValue = playerInput.Horizontal();
         verticalValue = playerInput.Vertical();
+        LayerCheck();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void LayerCheck()
     {
-        float divider = 5f;
-        if (collision.gameObject.tag == "Player 1" || collision.gameObject.tag == "Player 2")
+        float ypos1 = GameObject.FindGameObjectWithTag("Player 1").transform.position.y;
+        float ypos2 = GameObject.FindGameObjectWithTag("Player 2").transform.position.y;
+        SpriteRenderer r = GameObject.FindGameObjectWithTag("Player 1 Sprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer r2 = GameObject.FindGameObjectWithTag("Player 2 Sprite").GetComponent<SpriteRenderer>();
+
+        if (ypos1>=ypos2)
         {
-            speed = speed / divider;
+            r.sortingOrder = 0;
+            r2.sortingOrder = 100;
         }
-        else speed = divider;
+        if(ypos2 > ypos1)
+        {
+            r2.sortingOrder = 0;
+            r.sortingOrder = 100;
+        }
     }
 
     void FixedUpdate()

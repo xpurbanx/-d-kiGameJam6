@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Item
   - Player 1
-  - Player 2
   - Ground
+  - Player 2 Sprite
+  - Player 1 Sprite
+  - Player 2
   layers:
   - Default
   - TransparentFX
