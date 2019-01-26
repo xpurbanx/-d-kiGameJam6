@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     public GameObject player;
-    private GameObject pickedItem;
+    public GameObject pickedItem;
     private PlayerInput playerInput;
     private InteractedItems interacted;
     private Vector3 dropItem = new Vector3(0f, 2f, 0f);

@@ -130,6 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad683626db9e5a45963271fc6ad7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCollisions: []
+  isColliding: 0
 --- !u!114 &53978822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220592224}
   - component: {fileID: 220592225}
+  - component: {fileID: 220592226}
   m_Layer: 10
   m_Name: Player2_ItemLocation
   m_TagString: Untagged
@@ -188,7 +191,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0017923117, y: -0.3871495}
+  m_Offset: {x: -0.014224917, y: -0.3871495}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -199,8 +202,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6020963, y: 0.13966775}
+  m_Size: {x: 0.5772311, y: 0.13966775}
   m_EdgeRadius: 0
+--- !u!114 &220592226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220592223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa868d3b151a3541a5d907363d9e74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  score: 0
 --- !u!1 &807143108
 GameObject:
   m_ObjectHideFlags: 0
@@ -29844,6 +29861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa868d3b151a3541a5d907363d9e74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  score: 0
 --- !u!1001 &5111000070862372836
 PrefabInstance:
   m_ObjectHideFlags: 0
