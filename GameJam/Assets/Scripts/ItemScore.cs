@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ItemScore : HouseState
 {
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.name == "Player1_ItemLocation")
