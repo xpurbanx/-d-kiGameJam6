@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class SpawningItems : MonoBehaviour
 {
-    public GameObject[] itemType = new GameObject[11];
+    public List<GameObject> itemType = new List<GameObject>();
+    public int numberOfItems;
 
     private Vector2 lastPosition = new Vector3(0, 0, 0);
     private float mapX;
@@ -19,7 +21,7 @@ public class SpawningItems : MonoBehaviour
         mapY = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.y;
         int randomItemType;
 
-        for (int i = 0; i < 16; i++) // 16 jest randomowe
+        for (int i = 0; i < numberOfItems; i++)
         {
             randomItemType = Random.Range(0, 11);
 
