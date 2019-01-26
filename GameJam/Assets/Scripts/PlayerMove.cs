@@ -19,10 +19,29 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        //horizontalValue = Input.GetAxisRaw("Horizontal");
-        //verticalValue = Input.GetAxisRaw("Vertical");
+        
         horizontalValue = playerInput.Horizontal();
         verticalValue = playerInput.Vertical();
+        LayerCheck();
+    }
+
+    void LayerCheck()
+    {
+        float ypos1 = GameObject.FindGameObjectWithTag("Player 1").transform.position.y;
+        float ypos2 = GameObject.FindGameObjectWithTag("Player 2").transform.position.y;
+        SpriteRenderer r = GameObject.FindGameObjectWithTag("Player 1 Sprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer r2 = GameObject.FindGameObjectWithTag("Player 2 Sprite").GetComponent<SpriteRenderer>();
+
+        if (ypos1>=ypos2)
+        {
+            r.sortingOrder = 0;
+            r2.sortingOrder = 100;
+        }
+        if(ypos2 > ypos1)
+        {
+            r2.sortingOrder = 0;
+            r.sortingOrder = 100;
+        }
     }
 
     void FixedUpdate()
