@@ -1,22 +1,64 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    void ItemPickUp()
+    public GameObject player;
+    private GameObject pickedItem;
+    private PlayerInput playerInput;
+    private Vector3 dropItem = new Vector3(1f, 1f, 0f);
+    private Vector3 offset = new Vector3(3.2f, 3.5f, 0f);
+    private bool isPicked;
+    private float timePassed = 0f;
+    private float keyDelay = 0.5f;
+
+    private void Start()
     {
-        if (Input.GetKey(KeyCode.Space))
+        playerInput = GetComponent<PlayerInput>();
+    }
+
+    private void ItemPick()
+    {
+        if (InteractedItems.isColliding && isPicked == false)
         {
-            if (Item.itemColliding)
-            {
-                Debug.Log("Item podniesiony");
-            }
+            pickedItem = InteractedItems.currentCollisions.FirstOrDefault();
+            isPicked = true;
+            timePassed = 0f;
+        }
+    }
+    
+    private void ItemDrop()
+    {
+        if (isPicked == true && pickedItem != null)
+        {
+            pickedItem.transform.position = player.transform.position - dropItem;
+            pickedItem = null;
+            isPicked = false;
+            timePassed = 0f;
         }
     }
 
     private void Update()
     {
-        ItemPickUp();
+        timePassed += Time.deltaTime;
+
+        if (isPicked == false && Input.GetKey(KeyCode.Space) && timePassed >= keyDelay)
+        {
+            ItemPick();
+        }
+
+        if (isPicked == true && Input.GetKey(KeyCode.Space)  && timePassed >= keyDelay)
+        {
+            ItemDrop();
+            isPicked = false;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (isPicked && pickedItem != null)
+        {
+            pickedItem.transform.position = player.transform.localPosition + offset;
+        }
     }
 }
