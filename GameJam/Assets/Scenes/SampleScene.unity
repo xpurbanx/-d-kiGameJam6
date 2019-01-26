@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316192d8ff2f8d74e93639db1a7dc382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 53978820}
   pickedItem: {fileID: 0}
 --- !u!114 &53978823
 MonoBehaviour:
@@ -267,6 +266,7 @@ GameObject:
   - component: {fileID: 220592224}
   - component: {fileID: 220592225}
   - component: {fileID: 220592226}
+  - component: {fileID: 220592227}
   m_Layer: 10
   m_Name: Player2_ItemLocation
   m_TagString: Untagged
@@ -326,8 +326,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa868d3b151a3541a5d907363d9e74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  score: 0
+  itemsToLvl: []
+--- !u!114 &220592227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220592223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bf1f21bf6f35c4c9773f8be9b510cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToLvl: []
 --- !u!1 &572605668
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316192d8ff2f8d74e93639db1a7dc382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1070772572}
   pickedItem: {fileID: 0}
 --- !u!114 &1070772574
 MonoBehaviour:
@@ -30647,6 +30658,7 @@ GameObject:
   - component: {fileID: 1969815412}
   - component: {fileID: 1969815413}
   - component: {fileID: 1969815414}
+  - component: {fileID: 1969815415}
   m_Layer: 10
   m_Name: Player1_ItemLocation
   m_TagString: Untagged
@@ -30706,8 +30718,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa868d3b151a3541a5d907363d9e74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  score: 0
+  itemsToLvl: []
+--- !u!114 &1969815415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969815411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bf1f21bf6f35c4c9773f8be9b510cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToLvl: []
 --- !u!1001 &5111000070862372836
 PrefabInstance:
   m_ObjectHideFlags: 0

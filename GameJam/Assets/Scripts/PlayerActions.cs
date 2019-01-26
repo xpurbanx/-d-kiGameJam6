@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    public GameObject player;
     public GameObject pickedItem;
     private PlayerInput playerInput;
     private InteractedItems interacted;
@@ -35,7 +34,7 @@ public class PlayerActions : MonoBehaviour
     {
         if (isPicked == true && pickedItem != null)
         {
-            pickedItem.transform.position = player.transform.position - dropItem;
+            pickedItem.transform.position = gameObject.transform.position - dropItem;
             pickedItem.transform.localScale = new Vector3(pickedItem.transform.localScale.x * (1f/0.7f), pickedItem.transform.localScale.y * (1f / 0.7f), 0);
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             pickedItem = null;
@@ -64,7 +63,7 @@ public class PlayerActions : MonoBehaviour
     {
         if (isPicked && pickedItem != null)
         {
-            pickedItem.transform.position = player.transform.position + offset;
+            pickedItem.transform.position = gameObject.transform.position + offset;
         }
     }
 }

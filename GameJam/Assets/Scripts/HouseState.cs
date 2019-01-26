@@ -1,21 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HouseState : MonoBehaviour
 {
+    private List<GameObject> itemType;
+    public List<GameObject> itemsToLvl;
+    private int level;
+    private int score;
 
-    public int level;
-    public int score;
-    // Start is called before the first frame update
     void Start()
     {
-        
+        level = 1;
+        RequiredItemList(level);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (itemsToLvl.FirstOrDefault() == null)
+        {
+            LevelUp();
+            RequiredItemList(level);
+        }
+    }
+
+    void LevelUp()
+    {
+        level = level++;
+    }
+
+    void RequiredItemList(int level)
+    {
+        itemType = GameObject.Find("Item Manager").GetComponent<ItemsManagement>().itemType;
+
+        if (level < 6)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                int randomItemType = Random.Range(0, 11);
+                itemsToLvl.Add(itemType[randomItemType]);
+            }
+        }
+
+        else if (level < 11)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                int randomItemType = Random.Range(0, 11);
+                itemsToLvl.Add(itemType[randomItemType]);
+            }
+        }
+
+        else if (level < 16)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                int randomItemType = Random.Range(0, 11);
+                itemsToLvl.Add(itemType[randomItemType]);
+            }
+        }
     }
 }

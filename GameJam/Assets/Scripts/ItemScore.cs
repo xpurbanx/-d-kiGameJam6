@@ -11,9 +11,10 @@ public class ItemScore : HouseState
             if (collision.tag == "Player 1")
             {
                 GameObject pickedObject = GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem;
-                if (pickedObject != null)
+                if (gameObject.GetComponent<HouseState>().itemsToLvl.Contains(pickedObject))
                 {
-                    Destroy(GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem);
+                    gameObject.GetComponent<HouseState>().itemsToLvl.Remove(pickedObject);
+                    Destroy(pickedObject);
                 }
             }
         }
@@ -23,9 +24,10 @@ public class ItemScore : HouseState
             if (collision.tag == "Player 2")
             {
                 GameObject pickedObject = GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem;
-                if (pickedObject != null)
+                if (gameObject.GetComponent<HouseState>().itemsToLvl.Contains(pickedObject))
                 {
-                    Destroy(GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem);
+                    gameObject.GetComponent<HouseState>().itemsToLvl.Remove(pickedObject);
+                    Destroy(pickedObject);
                 }
             }
         }
