@@ -5,6 +5,7 @@ public class PlayerActions : MonoBehaviour
 {
     public GameObject pickedItem;
     private PlayerInput playerInput;
+    private PlayerMove playerMove;
     private InteractedItems interacted;
     private Vector3 dropItem = new Vector3(0f, 2f, 0f);
     private Vector3 offset = new Vector3(0f, 2f, 0f);
@@ -16,6 +17,7 @@ public class PlayerActions : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         interacted = GetComponent<InteractedItems>();
+        playerMove = GetComponent<PlayerMove>();
     }
 
     private void ItemPick()
@@ -42,6 +44,22 @@ public class PlayerActions : MonoBehaviour
             timePassed = 0f;
         }
     }
+    private void ItemPlace()
+    {
+        if (isPicked == true && pickedItem != null && pickedItem.tag == "Usable Item")
+        {
+            
+            Vector3 orientation = playerMove.forward;
+            GameObject placable = Instantiate(pickedItem.GetComponent<Placable>().placable);
+            placable.transform.position = gameObject.transform.position + (Vector3.Scale(new Vector3(2f,2f,0), orientation));
+            if (orientation == Vector3.up || orientation == Vector3.down)
+                placable.transform.eulerAngles = Vector3.up * 180;
+            Destroy(pickedItem);
+            pickedItem = null;
+            isPicked = false;
+            timePassed = 0f;
+        }
+    }
 
     private void Update()
     {
@@ -55,6 +73,12 @@ public class PlayerActions : MonoBehaviour
         if (isPicked == true && playerInput.AButton() && timePassed >= keyDelay)
         {
             ItemDrop();
+            isPicked = false;
+        }
+
+        if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
+        {
+            ItemPlace();
             isPicked = false;
         }
     }
