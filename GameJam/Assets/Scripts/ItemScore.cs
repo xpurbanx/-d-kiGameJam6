@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ItemScore : HouseState
 {
-    public int level;
-    public int score;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
