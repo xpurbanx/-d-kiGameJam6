@@ -28,11 +28,8 @@ public class SpawningItems : MonoBehaviour
             bool looping = true;
             while(looping==true)
             {
-                float x = Random.Range(-mapX / 2, mapX / 2);
+                float x = Random.Range(-mapX / 2, 0);
                 float y = Random.Range(-mapY / 2, mapY / 2);
-                
-
-                
 
                 // CZĘŚĆ MICHAŁA: DETEKCJA KOLIZJI PRZY SPAWNIE PRZEDMIOTU
 
