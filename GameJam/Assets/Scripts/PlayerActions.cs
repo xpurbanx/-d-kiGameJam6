@@ -10,7 +10,7 @@ public class PlayerActions : MonoBehaviour
     private Vector3 offset = new Vector3(1.3f, 1f, 0f);
     private bool isPicked;
     private float timePassed = 0f;
-    private float keyDelay = 0.5f;
+    private float keyDelay = 0.2f;
 
     private void Start()
     {
