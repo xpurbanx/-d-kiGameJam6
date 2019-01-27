@@ -180,6 +180,7 @@ public class PlayerActions : MonoBehaviour
             if (hit.collider.gameObject.name == "Wooden Log_down(Clone)" || hit.collider.gameObject.name == "Wooden Log_up(Clone)" ||
                 hit.collider.gameObject.name == "Wooden Log_left(Clone)" || hit.collider.gameObject.name == "Wooden Log_right(Clone)")
             {
+                pickedItem = null;
                 Destroy(hit.collider.gameObject);
                 Destroy(pickedItem);
             }
@@ -285,12 +286,15 @@ public class PlayerActions : MonoBehaviour
 
         if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
         {
-            if (pickedItem.tag == "Placable Item")
-                ItemPlace();
-            else if (pickedItem.name == "Fire_axe(Clone)")
-                UseAxe();
-            else if (pickedItem.name == "Crowbar")
-                UseCrowbar();
+            if (pickedItem != null)
+            {
+                if (pickedItem.tag == "Placable Item")
+                    ItemPlace();
+                else if (pickedItem.name == "Fire_axe(Clone)")
+                    UseAxe();
+                else if (pickedItem.name == "Crowbar")
+                    UseCrowbar();
+            }
         }
 
         Weight();
