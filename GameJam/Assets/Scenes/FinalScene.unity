@@ -129210,20 +129210,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
-        type: 3}
-      propertyPath: numberOfItems
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: toTimeToDisappear
-      value: 15
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: fromTimeToDisappear
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
+        type: 3}
+      propertyPath: numberOfItems
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac9f08f50487cb4397bf54323bfbbcd, type: 3}
@@ -129774,11 +129774,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 2383104171052031843, guid: 10fc5066789b5fc4586099bfae6d10d4,
-        type: 3}
-      propertyPath: m_TagString
-      value: House1
-      objectReference: {fileID: 0}
     - target: {fileID: 2383104171052031844, guid: 10fc5066789b5fc4586099bfae6d10d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -129798,6 +129793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171052031843, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: House1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fc5066789b5fc4586099bfae6d10d4, type: 3}
@@ -129903,6 +129903,11 @@ PrefabInstance:
       propertyPath: spriteSpaces.Array.data[4]
       value: 
       objectReference: {fileID: 1242254660}
+    - target: {fileID: 4178601270895944113, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4178601270895944073, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
@@ -130046,6 +130051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215678803665660895, guid: 03552a6e0a78c104f9242d8455f36dfd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8215678802485928183, guid: 03552a6e0a78c104f9242d8455f36dfd,
         type: 3}

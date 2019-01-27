@@ -29,6 +29,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPicked: 0
   isDropped: 0
+  pickedTime: 0
+  droppedTime: 0
 --- !u!1001 &6006574299100023798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 1644902103434029775, guid: 978fb645ea3d47547964710dae87059b,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1644902103434029774, guid: 978fb645ea3d47547964710dae87059b,
         type: 3}
