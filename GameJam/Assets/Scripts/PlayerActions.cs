@@ -220,7 +220,7 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed * 0.5f;
                     return;
                 case ("Bicycle Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.7f;
+                    playerMove.speed = old_speed * 1.4f;
                     return;
                 case ("Fridge Variant(Clone)"):
                     playerMove.speed = old_speed * 0.5f;
