@@ -85,7 +85,7 @@ public class ItemRequired : MonoBehaviour
                 // CZĘŚĆ MICHAŁA: DETEKCJA KOLIZJI PRZY SPAWNIE PRZEDMIOTU
 
                 Vector3 spawnPos = new Vector3(x, y);
-                float radius = 1f;
+                float radius = 2f;
                 //if(Physics2D.Distance(spawnPos, ))
 
                 if (Physics2D.OverlapCircle(spawnPos, radius))
