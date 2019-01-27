@@ -21,8 +21,7 @@ public class Crowbar : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.GetComponent<Item>().isPicked)
-            isPicked = true;
+        isPicked = gameObject.GetComponent<Item>().isPicked;
 
         if (isPicked && stun1)
         {
