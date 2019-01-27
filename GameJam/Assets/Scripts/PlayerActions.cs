@@ -76,6 +76,7 @@ public class PlayerActions : MonoBehaviour
             timePassed = 0f;
         }
     }
+
     private void ItemThrow()
     {
         Vector3 orientation = playerMove.forward;
@@ -109,13 +110,25 @@ public class PlayerActions : MonoBehaviour
             Debug.Log("Nie wykryto kolizji");
             pickedItem.transform.position = to;
             pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
+            pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             isPicked = false;
         }
+
         else if (hit.collider.tag == "Item")
         {
             Debug.Log("wykryto kolizje z itemem");
             pickedItem.transform.position = to;
             pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
+            pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
+            isPicked = false;
+        }
+
+        else if (hit.collider.tag == "Usable Item")
+        {
+            Debug.Log("wykryto kolizje z usable itemem");
+            pickedItem.transform.position = to;
+            pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
+            pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             isPicked = false;
         }
         // else if(hit.collider!=null)
