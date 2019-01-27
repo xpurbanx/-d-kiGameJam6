@@ -129130,11 +129130,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
-        type: 3}
-      propertyPath: numberOfItems
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: toTimeToDisappear
@@ -129144,6 +129139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fromTimeToDisappear
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
+        type: 3}
+      propertyPath: numberOfItems
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac9f08f50487cb4397bf54323bfbbcd, type: 3}
@@ -129788,11 +129788,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4178601270895944113, guid: deccaddabf61df44bab48dbfa2bb7fc2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4178601269559419663, guid: deccaddabf61df44bab48dbfa2bb7fc2,
         type: 3}
       propertyPath: m_TagString
@@ -129828,6 +129823,32 @@ PrefabInstance:
       propertyPath: spriteSpaces.Array.data[4]
       value: 
       objectReference: {fileID: 1242254660}
+    - target: {fileID: 4178601270895944113, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178601270536066058, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178601270536066058, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178601270536066059, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d987b8f2b9fae1f489b5914c7be1497a,
+        type: 3}
+    - target: {fileID: 4178601270536066059, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4178601270895944073, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
