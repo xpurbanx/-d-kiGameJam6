@@ -14,6 +14,8 @@ TagManager:
   - Usable Item
   - House1
   - House2
+  - Placable Item
+  - Placable
   layers:
   - Default
   - TransparentFX
@@ -54,11 +56,11 @@ TagManager:
   - name: Background
     uniqueID: 1931608289
     locked: 0
-  - name: Items
-    uniqueID: 3754489075
-    locked: 0
   - name: Buildings
     uniqueID: 3173433559
+    locked: 0
+  - name: Items
+    uniqueID: 3754489075
     locked: 0
   - name: Players
     uniqueID: 3396079595

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3220052967983990025}
   - component: {fileID: 3220052967983990024}
   - component: {fileID: 3220052967983990027}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wooden Log_down
-  m_TagString: Untagged
+  m_TagString: Placable Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

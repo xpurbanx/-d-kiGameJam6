@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5258716573136929686}
   - component: {fileID: 5258716573136929687}
   - component: {fileID: 5258716573136929680}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wooden Log_left
-  m_TagString: Untagged
+  m_TagString: Placable Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
