@@ -331,7 +331,7 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick 2 button 2
-    altNegativeButton: 9
+    altNegativeButton: '[9]'
     altPositiveButton: 
     gravity: 1000
     dead: 0.001
