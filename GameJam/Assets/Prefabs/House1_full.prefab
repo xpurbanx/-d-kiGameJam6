@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 1657036512882446730}
   m_Layer: 10
   m_Name: Player1_ItemLocation
-  m_TagString: Untagged
+  m_TagString: House1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToLvl: []
-  level: 2
+  level: 1
 --- !u!114 &2383104171052031847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToLvl: []
-  level: 2
+  level: 1
 --- !u!114 &1657036512882446730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +907,7 @@ MonoBehaviour:
   - {fileID: 6919759548001748517}
   - {fileID: 1251635199591151595}
   - {fileID: 2394116038704838380}
-  level_check: 0
+  level_check: 1
   currentLevel: 0
 --- !u!1 &2383104171512270244
 GameObject:
