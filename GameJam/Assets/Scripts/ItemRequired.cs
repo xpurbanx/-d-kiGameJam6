@@ -30,7 +30,7 @@ public class ItemRequired : MonoBehaviour
         shuffledList = allItems.OrderBy(x => Random.value).ToList();
         SplitList();
         SpawnItems();
-        //printLists();
+        //PrintLists();
 
     }
 
@@ -74,7 +74,7 @@ public class ItemRequired : MonoBehaviour
 
         for (int i = 0; i < numberOfItems; i++)
         {
-            int randomItemType = Random.Range(0, 5);
+            int randomItemType = Random.Range(0, 6);
 
             bool looping = true;
             while (looping == true)
@@ -111,7 +111,7 @@ public class ItemRequired : MonoBehaviour
         numberOfItems = (int)System.Math.Ceiling(numberOfItems / 2f);
         for (int i = 0; i < numberOfItems; i++)
         {
-            int randomItemType = Random.Range(0, 5);
+            int randomItemType = Random.Range(0, 6);
 
             bool looping = true;
             while (looping == true)

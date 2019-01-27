@@ -34,6 +34,7 @@ public class PlayerActions : MonoBehaviour
             isPicked = true;
             if (pickedItem.tag == "Item")
             {
+                pickedItem.GetComponent<Item>().pickedTime = Time.time;
                 pickedItem.GetComponent<Item>().isPicked = true;
                 pickedItem.GetComponent<Item>().isDropped = false;
             }
@@ -50,6 +51,7 @@ public class PlayerActions : MonoBehaviour
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             if (pickedItem.tag == "Item")
             {
+                pickedItem.GetComponent<Item>().droppedTime = Time.time;
                 pickedItem.GetComponent<Item>().isPicked = false;
                 pickedItem.GetComponent<Item>().isDropped = true;
             }
