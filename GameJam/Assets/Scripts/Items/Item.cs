@@ -37,7 +37,7 @@ public class Item : MonoBehaviour
 
         if (Time.time - timeStart - timeHandling >= timeDisappear && !isPicked)
         {
-            Debug.Log(Time.time + timeStart + timeHandling + timeDisappear);
+           // Debug.Log(Time.time + timeStart + timeHandling + timeDisappear);
             float mapX = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.x;
             float mapY = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.y;
 
