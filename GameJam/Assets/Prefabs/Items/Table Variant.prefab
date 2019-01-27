@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7354332800042035824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928495249291481473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c4acf2b39216e48a3b869befa51c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPicked: 0
+  isDropped: 0
 --- !u!114 &8875136993866381190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,19 +29,6 @@ MonoBehaviour:
   shadow: {fileID: 21300000, guid: 9e607e9d6c7fabe4cb07437de4fb2131, type: 3}
   noShadow: {fileID: 21300000, guid: 7b04643ea85a19349b05d339be2876d4, type: 3}
   spriteRenderer: {fileID: 0}
---- !u!114 &7354332800042035824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5928495249291481473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c4acf2b39216e48a3b869befa51c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStart: 0
 --- !u!1001 &4942105461981084489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 1644902103434029768, guid: 978fb645ea3d47547964710dae87059b,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1938961580765677258, guid: 978fb645ea3d47547964710dae87059b,
         type: 3}
