@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
+    private float old_speed;
     public float howFar = 4.8f;
     public GameObject pickedItem;
     private PlayerInput playerInput;
@@ -22,6 +23,7 @@ public class PlayerActions : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         interacted = GetComponent<InteractedItems>();
         playerMove = GetComponent<PlayerMove>();
+        old_speed = playerMove.speed;
     }
 
     private void ItemPick()
@@ -205,6 +207,29 @@ public class PlayerActions : MonoBehaviour
         }
     }
 
+    void Weight()
+    {
+        if (isPicked)
+        {
+            switch (playerMove.name)
+            {
+                case ("Armchair Variant"):
+                    playerMove.speed = old_speed *0.5f;
+                    Debug.Log("WOLNO");
+                    return;
+                default:
+                    playerMove.speed = old_speed;
+                    Debug.Log("NORMALNIE");
+                    return;
+            }
+        }
+        else
+            playerMove.speed = old_speed;
+
+
+
+    }
+
     private void Update()
     {
         timePassed += Time.deltaTime;
@@ -234,6 +259,8 @@ public class PlayerActions : MonoBehaviour
             else if (pickedItem.name == "Crowbar")
                 UseCrowbar();
         }
+
+        Weight();
     }
 
     void LateUpdate()
