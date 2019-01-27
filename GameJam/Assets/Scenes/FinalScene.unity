@@ -129849,6 +129849,11 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4178601270536066056, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4868ca2328263924497b1eb3b59d380e, type: 2}
     m_RemovedComponents:
     - {fileID: 4178601270895944073, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
