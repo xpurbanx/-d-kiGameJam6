@@ -15,6 +15,19 @@ MonoBehaviour:
   shadow: {fileID: 21300000, guid: 541e1ebc45b7e574b950bfd73b5b67a9, type: 3}
   noShadow: {fileID: 21300000, guid: 917a0c14ad6998f4db6a48dfd28610ee, type: 3}
   spriteRenderer: {fileID: 0}
+--- !u!114 &6788050876989724556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612567540948961014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c4acf2b39216e48a3b869befa51c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStart: 0
 --- !u!1001 &5554999494261664830
 PrefabInstance:
   m_ObjectHideFlags: 0
