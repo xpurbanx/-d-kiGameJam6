@@ -32,7 +32,7 @@ public class HouseState : MonoBehaviour
 
     void RequiredItemList(int level)
     {
-        itemType = GameObject.Find("Item Manager").GetComponent<SpawningItems>().itemType;
+        itemType = GameObject.Find("Item Manager").GetComponent<ItemRequired>().allItems;
 
         if (level < 6)
         {
