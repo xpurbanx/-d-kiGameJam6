@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemScore : HouseState
@@ -11,9 +12,26 @@ public class ItemScore : HouseState
             if (collision.tag == "Player 1")
             {
                 GameObject pickedObject = GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem;
-                if (pickedObject != null)
+                bool isRequired = false;
+                int index = 0;
+
+                foreach (GameObject item in gameObject.GetComponent<HouseState>().itemsToLvl)
                 {
-                    Destroy(GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem);
+                    if (pickedObject != null)
+                    {
+                        if (item.name + "(Clone)" == pickedObject.name)
+                        {
+                            index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
+                            isRequired = true;
+                        }
+                    }
+                }
+
+                if (isRequired)
+                {
+                    gameObject.GetComponent<HouseState>().itemsToLvl.RemoveAt(index);
+                    Destroy(pickedObject);
+                    isRequired = false;
                 }
             }
         }
@@ -23,9 +41,27 @@ public class ItemScore : HouseState
             if (collision.tag == "Player 2")
             {
                 GameObject pickedObject = GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem;
-                if (pickedObject != null)
+                bool isRequired = false;
+                int index = 0;
+
+                foreach (GameObject item in gameObject.GetComponent<HouseState>().itemsToLvl)
                 {
-                    Destroy(GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem);
+                    if (pickedObject != null)
+                    {
+                        if (item.name + "(Clone)" == pickedObject.name)
+                        {
+                            index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
+                            isRequired = true;
+                        }
+                    }
+                }
+
+                if (isRequired)
+                {
+                    gameObject.GetComponent<HouseState>().itemsToLvl.RemoveAt(index);
+                    GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem = null;
+                    Destroy(pickedObject);
+                    isRequired = false;
                 }
             }
         }

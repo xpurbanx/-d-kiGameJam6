@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ItemsManagement : MonoBehaviour
 {
-    public GameObject[] itemType = new GameObject[11];
+    public List<GameObject> itemType;
 
     private Vector2 lastPosition = new Vector3(0, 0, 0);
     private float mapX;
     private float mapY;
+    private int level;
 
     void Start()
     {
@@ -27,13 +29,6 @@ public class ItemsManagement : MonoBehaviour
             GameObject item = Instantiate(itemType[randomItemType]);
 
             item.transform.position = new Vector2(x, y);
-
-            if (item.GetComponent<Collider2D>().IsTouchingLayers(10))
-            {
-                x = Random.Range(-mapX / 2, mapX / 2);
-                y = Random.Range(-mapY / 2, mapY / 2);
-                item.transform.position = new Vector2(x, y);
-            }
         }
     }
 }
