@@ -30,6 +30,7 @@ public class PlayerActions : MonoBehaviour
             isPicked = true;
             if (pickedItem.tag == "Item")
             {
+                pickedItem.GetComponent<Item>().pickedTime = Time.time;
                 pickedItem.GetComponent<Item>().isPicked = true;
                 pickedItem.GetComponent<Item>().isDropped = false;
             }
@@ -46,6 +47,7 @@ public class PlayerActions : MonoBehaviour
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             if (pickedItem.tag == "Item")
             {
+                pickedItem.GetComponent<Item>().droppedTime = Time.time;
                 pickedItem.GetComponent<Item>().isPicked = false;
                 pickedItem.GetComponent<Item>().isDropped = true;
             }
@@ -58,7 +60,6 @@ public class PlayerActions : MonoBehaviour
     {
         if (isPicked == true && pickedItem != null && pickedItem.tag == "Usable Item")
         {
-            
             Vector3 orientation = playerMove.forward;
             GameObject placable = Instantiate(pickedItem.GetComponent<Placable>().placable);
             placable.transform.position = gameObject.transform.position + (Vector3.Scale(new Vector3(2f,2f,0), orientation));
