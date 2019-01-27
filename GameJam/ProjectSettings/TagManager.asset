@@ -11,6 +11,9 @@ TagManager:
   - Player 1 Sprite
   - Player 2
   - Path
+  - Usable Item
+  - House1
+  - House2
   layers:
   - Default
   - TransparentFX
