@@ -8,7 +8,7 @@ public class PlayerActions : MonoBehaviour
     private InteractedItems interacted;
     private Vector3 dropItem = new Vector3(0f, 2f, 0f);
     private Vector3 offset = new Vector3(0f, 2f, 0f);
-    private bool isPicked;
+    public bool isPicked;
     private float timePassed = 0f;
     private float keyDelay = 0.2f;
 

@@ -5,44 +5,93 @@ using UnityEngine;
 public class ThrowItem : MonoBehaviour
 {
     //PUBLIC
-    public Transform[] waypointList;
-    public int currentWaypoint;
-    public float speed = 5f;
+    public float speed = 10000.0f;
+    public float step;
 
     //PRIVATE
-    Transform targetWaypoint;
-
-
-    //ZAMIEŃ TRANSFORMY NA TRZYMANY OBIEKT I PODŁĄCZ GO.
-
+    GameObject p1;
+    GameObject p2;
+    GameObject thrownItem;
+    PlayerInput playerInput;
+    PlayerActions actions;
+    Vector2 from;
+    Vector2 to;
 
     void Start()
     {
-
+        step = speed * Time.deltaTime;
+        playerInput = GetComponent<PlayerInput>();
+        p1 = GameObject.FindGameObjectWithTag("Player 1 Sprite");
+        p2 = GameObject.FindGameObjectWithTag("Player 2 Sprite");
     }
 
-    void Update()
+    /*RaycastHit2D raycast()
     {
-        if (currentWaypoint < this.waypointList.Length)
+
+    }*/
+
+    void FixedUpdate()
+    {
+        actions = gameObject.GetComponent<PlayerActions>();
+        thrownItem = actions.pickedItem;
+        Vector2 origin = Vector2.zero;
+        SpriteRenderer s1 = p1.GetComponent<SpriteRenderer>();
+        SpriteRenderer s2 = p2.GetComponent<SpriteRenderer>();
+        from = new Vector2(transform.position.x, transform.position.y + 0.5f);
+        to = Vector2.zero;
+
+
+
+        if (thrownItem != null && playerInput.BButton() && actions.isPicked == true)
         {
-            if (targetWaypoint == null)
-                targetWaypoint = waypointList[currentWaypoint];
-            move();
+            RaycastHit2D hit;
+
+            string name = s1.sprite.name;
+            if (name.Contains("down") || name.Contains("DOWN"))
+            {
+                origin = new Vector2(transform.position.x, transform.position.y - 2f);
+                Debug.Log("down" + origin);
+                to = new Vector2(transform.position.x, transform.position.y - 3.5f);
+            }
+            if (name.Contains("up") || name.Contains("UP"))
+            {
+                Debug.Log("up");
+                to = new Vector2(transform.position.x, transform.position.y + 3.5f);
+                origin = new Vector2(transform.position.x, transform.position.y + 2f);
+            }
+            if (name.Contains("left") || name.Contains("LEFT"))
+            {
+                Debug.Log("left");
+                to = new Vector2(transform.position.x - 3.5f, transform.position.y);
+                origin = new Vector2(transform.position.x - 2f, transform.position.y);
+            }
+            if (name.Contains("right") || name.Contains("RIGHT"))
+            {
+                Debug.Log("right");
+                to = new Vector2(transform.position.x + 3.5f, transform.position.y);
+                origin = new Vector2(transform.position.x + 2f, transform.position.y);
+            }
+            hit = Physics2D.Raycast(transform.position, origin, 3f);
+
+            Debug.DrawRay(transform.position, origin, Color.red);
+            if (hit.collider == null)
+                move();
+            else if (hit.collider.tag == "Item")
+                move();
+
         }
     }
 
     void move()
     {
-        // rotating towards the target we want object to move
-        transform.forward = Vector3.RotateTowards(transform.forward, targetWaypoint.position - transform.position, speed * Time.deltaTime, 0.0f);
+        Debug.Log(Time.deltaTime + " | " + step + " | " + speed);
 
-        // move towards the target
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
 
-        if (transform.position == targetWaypoint.position)
-        {
-            currentWaypoint++;
-            targetWaypoint = waypointList[currentWaypoint];
-        }
+
+        actions.isPicked = false;
+        thrownItem.transform.position = Vector2.MoveTowards(from, to, 5f);//step);
+        thrownItem.transform.localScale = thrownItem.transform.localScale * (1f / 0.7f);
+
+
     }
 }

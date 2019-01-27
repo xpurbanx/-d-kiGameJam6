@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 53978824}
   - component: {fileID: 53978823}
   - component: {fileID: 53978821}
+  - component: {fileID: 6668120137693651245}
   m_Layer: 0
   m_Name: Player1 Controller
   m_TagString: Player 1
@@ -170,6 +171,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad683626db9e5a45963271fc6ad7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCollisions: []
+  isColliding: 0
+--- !u!114 &6668120137693651245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53978820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e50c1c5123c3742b50ffc33edc733b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentWaypoint: 0
+  speed: 5
 --- !u!1 &348348274
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316192d8ff2f8d74e93639db1a7dc382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2042572719}
+  pickedItem: {fileID: 0}
 --- !u!114 &2042572724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,3 +450,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad683626db9e5a45963271fc6ad7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCollisions: []
+  isColliding: 0
