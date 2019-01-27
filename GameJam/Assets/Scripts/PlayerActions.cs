@@ -180,7 +180,6 @@ public class PlayerActions : MonoBehaviour
             if (hit.collider.gameObject.name == "Wooden Log_down(Clone)" || hit.collider.gameObject.name == "Wooden Log_up(Clone)" ||
                 hit.collider.gameObject.name == "Wooden Log_left(Clone)" || hit.collider.gameObject.name == "Wooden Log_right(Clone)")
             {
-                pickedItem = null;
                 Destroy(hit.collider.gameObject);
                 Destroy(pickedItem);
             }
