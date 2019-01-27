@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    private static List<GameObject> itemsNeeded;
+    private  List<GameObject> itemsNeeded;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class UI : MonoBehaviour
     {
         foreach (GameObject item in itemsNeeded)
         {
-            Debug.Log(tag + item);
+            //Debug.Log(tag + item);
 
         }
 
