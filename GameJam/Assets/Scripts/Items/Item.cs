@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [HideInInspector]
     public bool isPicked = false;
+    [HideInInspector]
     public bool isDropped = false;
 
     private float timeStart = 0;
     private float timeDisappear = 0;
     private float timeHandling = 0;
+    private float wasHandled = 0;
 
     private void Awake()
     {
@@ -30,14 +33,22 @@ public class Item : MonoBehaviour
         {
             if (timeHandling == 0)
                 timeHandling = Time.time;
+            else
+            {
+                wasHandled = timeHandling;
+                timeHandling = Time.time;
+            }
         }
 
         if (isDropped == true)
         {
-            timeHandling = Time.time - timeHandling;
+            if (wasHandled == 0)
+                timeHandling = Time.time - timeHandling;
+            else if (wasHandled != 0)
+                timeHandling = Time.time - (timeHandling + wasHandled);
         }
 
-        if (Time.time - timeStart >= timeDisappear && !isPicked)
+        if (Time.time - timeStart - timeHandling >= timeDisappear && !isPicked)
         {
             float mapX = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.x;
             float mapY = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.y;
