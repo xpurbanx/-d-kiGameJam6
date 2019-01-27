@@ -152,15 +152,16 @@ public class PlayerActions : MonoBehaviour
             ItemDrop();
             isPicked = false;
         }
+
         if (isPicked == true && playerInput.BButton() && timePassed >= keyDelay)
         {
             ItemThrow();
-            if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
-            {
-                ItemPlace();
-                isPicked = false;
-            }
+        }
 
+        if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
+        {
+            ItemPlace();
+            isPicked = false;
         }
     }
 
