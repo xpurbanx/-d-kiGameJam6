@@ -45,7 +45,7 @@ public class HouseState : MonoBehaviour
 
         else if (level < 11)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
@@ -54,7 +54,7 @@ public class HouseState : MonoBehaviour
 
         else if (level < 16)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 5; i++)
             {
                 int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
