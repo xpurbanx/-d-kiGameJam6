@@ -35,7 +35,7 @@ public class PlayerActions : MonoBehaviour
             pickedItem.transform.localScale = new Vector3(pickedItem.transform.localScale.x * 0.7f, pickedItem.transform.localScale.y * 0.7f, 0);
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().noShadow;
             isPicked = true;
-            if (pickedItem.tag == "Item" || pickedItem.name == "Crowbar(Clone)(Clone)")
+            if (pickedItem.tag == "Item" || pickedItem.name == "Crowbar(Clone)")
             {
                 pickedItem.GetComponent<Item>().pickedTime = Time.time;
                 pickedItem.GetComponent<Item>().isPicked = true;
@@ -285,12 +285,15 @@ public class PlayerActions : MonoBehaviour
 
         if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
         {
-            if (pickedItem.tag == "Placable Item")
-                ItemPlace();
-            else if (pickedItem.name == "Fire_axe(Clone)")
-                UseAxe();
-            else if (pickedItem.name == "Crowbar")
-                UseCrowbar();
+            if (pickedItem != null)
+            {
+                if (pickedItem.tag == "Placable Item")
+                    ItemPlace();
+                else if (pickedItem.name == "Fire_axe(Clone)")
+                    UseAxe();
+                else if (pickedItem.name == "Crowbar")
+                    UseCrowbar();
+            }
         }
 
         Weight();
