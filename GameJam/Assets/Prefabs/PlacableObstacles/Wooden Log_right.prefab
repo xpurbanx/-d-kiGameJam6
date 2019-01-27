@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8382237703129446566}
   - component: {fileID: 8382237703129446567}
   - component: {fileID: 8382237703129446616}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wooden Log_right
   m_TagString: Placable Item
   m_Icon: {fileID: 0}
