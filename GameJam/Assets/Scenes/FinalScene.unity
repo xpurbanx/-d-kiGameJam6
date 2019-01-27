@@ -130317,6 +130317,16 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7340925624448751051, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.33600712
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340925624448751051, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.60798573
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8, type: 3}
 --- !u!1001 &1668663321
@@ -130527,7 +130537,7 @@ PrefabInstance:
     - target: {fileID: 8382237703129446617, guid: 5763c5538dc8f9545833d850793d7e37,
         type: 3}
       propertyPath: m_Name
-      value: Wooden Log_right
+      value: Wooden Log_left(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 8382237703129446566, guid: 5763c5538dc8f9545833d850793d7e37,
         type: 3}
