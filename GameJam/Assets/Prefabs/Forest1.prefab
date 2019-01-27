@@ -469,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnable: {fileID: 3746948267141322455, guid: 2d6c9379ef68cea47aa55c8fdaf65d74,
     type: 3}
-  spawnTime: 5
+  spawnTime: 30
 --- !u!1 &7340925625632107407
 GameObject:
   m_ObjectHideFlags: 0
