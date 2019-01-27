@@ -62,7 +62,7 @@ public class PlayerActions : MonoBehaviour
     }
     private void ItemPlace()
     {
-        if (isPicked == true && pickedItem != null && pickedItem.tag == "Usable Item")
+        if (isPicked == true && pickedItem != null && pickedItem.tag == "Placable Item")
         {
 
             Vector3 orientation = playerMove.forward;
@@ -131,6 +131,15 @@ public class PlayerActions : MonoBehaviour
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             isPicked = false;
         }
+
+        else if (hit.collider.tag == "Placable Item")
+        {
+            Debug.Log("wykryto kolizje z usable itemem");
+            pickedItem.transform.position = to;
+            pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
+            pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
+            isPicked = false;
+        }
         // else if(hit.collider!=null)
         // Debug.Log("wykryto kolizje");
         //pickedItem.transform.position = to;
@@ -152,7 +161,6 @@ public class PlayerActions : MonoBehaviour
             ItemDrop();
             isPicked = false;
         }
-
         if (isPicked == true && playerInput.BButton() && timePassed >= keyDelay)
         {
             ItemThrow();
@@ -161,7 +169,6 @@ public class PlayerActions : MonoBehaviour
         if (isPicked == true && playerInput.XButton() && timePassed >= keyDelay)
         {
             ItemPlace();
-            isPicked = false;
         }
     }
 
