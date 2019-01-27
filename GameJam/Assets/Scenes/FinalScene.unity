@@ -129860,7 +129860,8 @@ PrefabInstance:
       propertyPath: spriteSpaces.Array.data[4]
       value: 
       objectReference: {fileID: 1242254660}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4178601270895944073, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
 --- !u!1001 &7340925625030729164
 PrefabInstance:
@@ -130038,7 +130039,8 @@ PrefabInstance:
       propertyPath: spriteSpaces.Array.data[4]
       value: 
       objectReference: {fileID: 1444964456}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8215678803665660887, guid: 03552a6e0a78c104f9242d8455f36dfd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03552a6e0a78c104f9242d8455f36dfd, type: 3}
 --- !u!1001 &8457180134143517777
 PrefabInstance:
