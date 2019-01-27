@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1535682387691691224}
   - component: {fileID: 6350404955853166642}
   - component: {fileID: 1287287653463233232}
-  - component: {fileID: 8529185893692733000}
+  - component: {fileID: 2235087898218513917}
   m_Layer: 0
   m_Name: Crowbar
   m_TagString: Usable Item
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdeb9fa4b8fa3443ad29210bbdd131d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8529185893692733000
+--- !u!114 &2235087898218513917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
