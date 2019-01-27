@@ -130527,7 +130527,7 @@ PrefabInstance:
     - target: {fileID: 8382237703129446617, guid: 5763c5538dc8f9545833d850793d7e37,
         type: 3}
       propertyPath: m_Name
-      value: Wooden Log_right
+      value: Wooden Log_left(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 8382237703129446566, guid: 5763c5538dc8f9545833d850793d7e37,
         type: 3}
