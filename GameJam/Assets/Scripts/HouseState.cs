@@ -38,7 +38,7 @@ public class HouseState : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                int randomItemType = Random.Range(0, 11);
+                int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
             }
         }
@@ -47,7 +47,7 @@ public class HouseState : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                int randomItemType = Random.Range(0, 11);
+                int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
             }
         }
@@ -56,7 +56,7 @@ public class HouseState : MonoBehaviour
         {
             for (int i = 0; i < 7; i++)
             {
-                int randomItemType = Random.Range(0, 11);
+                int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
             }
         }
