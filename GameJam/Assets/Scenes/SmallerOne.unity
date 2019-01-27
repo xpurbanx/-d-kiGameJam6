@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 53978821}
   - component: {fileID: 53978822}
   - component: {fileID: 53978828}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player1 Controller
   m_TagString: Player 1
   m_Icon: {fileID: 0}
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316192d8ff2f8d74e93639db1a7dc382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howFar: 4.8
   pickedItem: {fileID: 0}
   isPicked: 0
 --- !u!114 &53978823
@@ -270,9 +271,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e50c1c5123c3742b50ffc33edc733b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   howFar: 4.8
   speed: 5
   step: 0
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  thrownItem: {fileID: 0}
+  playerInput: {fileID: 0}
+  actions: {fileID: 0}
+  from: {x: 0, y: 0}
+  to: {x: 0, y: 0}
 --- !u!1 &572605668
 GameObject:
   m_ObjectHideFlags: 0
@@ -32425,7 +32485,7 @@ GameObject:
   - component: {fileID: 1070772574}
   - component: {fileID: 1070772573}
   - component: {fileID: 1070772580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player2 Controller
   m_TagString: Player 2
   m_Icon: {fileID: 0}
@@ -32445,6 +32505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316192d8ff2f8d74e93639db1a7dc382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howFar: 4.8
   pickedItem: {fileID: 0}
   isPicked: 0
 --- !u!114 &1070772574
@@ -32568,9 +32629,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e50c1c5123c3742b50ffc33edc733b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   howFar: 4.8
   speed: 5
   step: 0
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  thrownItem: {fileID: 0}
+  playerInput: {fileID: 0}
+  actions: {fileID: 0}
+  from: {x: 0, y: 0}
+  to: {x: 0, y: 0}
 --- !u!1 &1085506864
 GameObject:
   m_ObjectHideFlags: 0
@@ -32720,7 +32840,7 @@ GameObject:
   - component: {fileID: 1170589490}
   - component: {fileID: 1170589489}
   - component: {fileID: 1170589488}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tilemap_Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33257,6 +33377,11 @@ PrefabInstance:
       propertyPath: toTimeToDisappear
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
+        type: 3}
+      propertyPath: numberOfItems
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac9f08f50487cb4397bf54323bfbbcd, type: 3}
 --- !u!1 &1440922887
@@ -33271,7 +33396,7 @@ GameObject:
   - component: {fileID: 1440922891}
   - component: {fileID: 1440922890}
   - component: {fileID: 1440922889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33299,7 +33424,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440922887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -48181,6 +48306,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 476877992746240147, guid: dc791148ed33ccd4ea725efd060c4194,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.037801445
+      objectReference: {fileID: 0}
+    - target: {fileID: 476877992746240147, guid: dc791148ed33ccd4ea725efd060c4194,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0379518
+      objectReference: {fileID: 0}
+    - target: {fileID: 476877992746240147, guid: dc791148ed33ccd4ea725efd060c4194,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00075531006
+      objectReference: {fileID: 0}
+    - target: {fileID: 476877992746240147, guid: dc791148ed33ccd4ea725efd060c4194,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5971364
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc791148ed33ccd4ea725efd060c4194, type: 3}
 --- !u!1001 &1535682387516320596
@@ -48319,6 +48464,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270247, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.000017493963
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270247, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.09534952
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270247, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.8433253
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270247, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.60462016
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270249, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.013752013
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171512270249, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.6653654
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fc5066789b5fc4586099bfae6d10d4, type: 3}
 --- !u!1001 &5111000070862372836
@@ -48357,6 +48532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205306623341409890, guid: 8184b83e829fc144c8b29750d5298b78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5968846986216700933, guid: 8184b83e829fc144c8b29750d5298b78,
         type: 3}
@@ -48475,6 +48655,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3702739022754049202, guid: 323dba5f8bbac834e83785e9bb38a360,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5279948112799291951, guid: 323dba5f8bbac834e83785e9bb38a360,
         type: 3}
       propertyPath: speed

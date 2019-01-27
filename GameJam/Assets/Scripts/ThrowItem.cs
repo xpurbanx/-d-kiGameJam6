@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,11 +26,6 @@ public class ThrowItem : MonoBehaviour
         p2 = GameObject.FindGameObjectWithTag("Player 2 Sprite");
     }
 
-    /*RaycastHit2D raycast()
-    {
-
-    }*/
-
     void FixedUpdate()
     {
         actions = gameObject.GetComponent<PlayerActions>();
@@ -41,13 +36,52 @@ public class ThrowItem : MonoBehaviour
         from = new Vector2(transform.position.x, transform.position.y + 0.5f);
         to = Vector2.zero;
 
+        if(Vector3.forward == Vector3.down)
+        {
+            origin = new Vector2(transform.position.x, transform.position.y - 2f);
+            Debug.Log("down" + origin);
+            to = new Vector2(transform.position.x, transform.position.y - howFar);
+        }
 
 
+        
         if (thrownItem != null && playerInput.BButton() && actions.isPicked == true)
         {
             RaycastHit2D hit;
 
-            string name = s1.sprite.name;
+            
+            
+
+            hit = Physics2D.Raycast(transform.position, origin, 3f);
+
+            Debug.DrawRay(transform.position, origin, Color.red);
+            if (hit.collider == null)
+                move();
+            else if (hit.collider.tag == "Item")
+                move();
+
+        }
+    }
+
+    void move()
+    {
+        Debug.Log(Time.deltaTime + " | " + step + " | " + speed);
+
+
+
+        actions.isPicked = false;
+        thrownItem.transform.position = Vector2.MoveTowards(from, to, 5f);//step);
+        thrownItem.transform.localScale = thrownItem.transform.localScale * (1f / 0.7f);
+
+
+    }
+}
+
+
+
+
+/*
+ *          string name = s1.sprite.name;
             string name2 = s2.sprite.name;
 
             if (name.Contains("down") || name.Contains("DOWN"))
@@ -99,29 +133,4 @@ public class ThrowItem : MonoBehaviour
                 Debug.Log("right");
                 to = new Vector2(transform.position.x + howFar, transform.position.y);
                 origin = new Vector2(transform.position.x + 2f, transform.position.y);
-            }
-
-            hit = Physics2D.Raycast(transform.position, origin, 3f);
-
-            Debug.DrawRay(transform.position, origin, Color.red);
-            if (hit.collider == null)
-                move();
-            else if (hit.collider.tag == "Item")
-                move();
-
-        }
-    }
-
-    void move()
-    {
-        Debug.Log(Time.deltaTime + " | " + step + " | " + speed);
-
-
-
-        actions.isPicked = false;
-        thrownItem.transform.position = Vector2.MoveTowards(from, to, 5f);//step);
-        thrownItem.transform.localScale = thrownItem.transform.localScale * (1f / 0.7f);
-
-
-    }
-}
+            }*/
