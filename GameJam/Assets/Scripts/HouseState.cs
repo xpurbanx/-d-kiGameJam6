@@ -28,6 +28,7 @@ public class HouseState : MonoBehaviour
     void LevelUp()
     {
         level = level + 1;
+        Debug.Log("LEVEL: " + level);
     }
 
     void RequiredItemList(int level)
@@ -61,9 +62,9 @@ public class HouseState : MonoBehaviour
             }
         }
 
-        foreach (GameObject item in itemsToLvl)
-        {
-            Debug.Log(item);
-        }
+        //foreach (GameObject item in itemsToLvl)
+        //{
+        //    Debug.Log(item);
+        //}
     }
 }
