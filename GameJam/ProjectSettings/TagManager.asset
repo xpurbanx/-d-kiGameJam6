@@ -10,7 +10,12 @@ TagManager:
   - Player 2 Sprite
   - Player 1 Sprite
   - Player 2
+  - Path
   - Usable Item
+  - House1
+  - House2
+  - Placable Item
+  - Placable
   layers:
   - Default
   - TransparentFX
@@ -20,9 +25,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - HUD1
+  - HUD2
+  - Environment
   - 
   - 
   - 
@@ -50,6 +55,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1931608289
+    locked: 0
+  - name: Buildings
+    uniqueID: 3173433559
     locked: 0
   - name: Items
     uniqueID: 3754489075

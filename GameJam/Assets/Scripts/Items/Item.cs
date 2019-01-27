@@ -8,11 +8,14 @@ public class Item : MonoBehaviour
     public bool isPicked = false;
     [HideInInspector]
     public bool isDropped = false;
+    [HideInInspector]
+    public float pickedTime;
+    [HideInInspector]
+    public float droppedTime;
 
     private float timeStart = 0;
     private float timeDisappear = 0;
     private float timeHandling = 0;
-    private float wasHandled = 0;
 
     private void Awake()
     {
@@ -29,27 +32,12 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if (isPicked == true)
-        {
-            if (timeHandling == 0)
-                timeHandling = Time.time;
-            else
-            {
-                wasHandled = timeHandling;
-                timeHandling = Time.time;
-            }
-        }
-
-        if (isDropped == true)
-        {
-            if (wasHandled == 0)
-                timeHandling = Time.time - timeHandling;
-            else if (wasHandled != 0)
-                timeHandling = Time.time - (timeHandling + wasHandled);
-        }
+        if (!isPicked)
+            timeHandling = droppedTime - pickedTime;
 
         if (Time.time - timeStart - timeHandling >= timeDisappear && !isPicked)
         {
+           // Debug.Log(Time.time + timeStart + timeHandling + timeDisappear);
             float mapX = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.x;
             float mapY = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.y;
 

@@ -60,7 +60,7 @@ MonoBehaviour:
   usableItems: []
   itemsSide1: []
   itemsSide2: []
-  numberOfItems: 16
+  numberOfItems: 12
   timeStarted: 0
 --- !u!114 &5336162702918149682
 MonoBehaviour:
@@ -74,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab37bb2ea7940714b83090fcaeb0881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fromTimeToDisappear: 10
-  toTimeToDisappear: 20
+  fromTimeToDisappear: 20
+  toTimeToDisappear: 40
