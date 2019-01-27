@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
@@ -16,7 +17,7 @@ public class PlayerActions : MonoBehaviour
     public bool isPicked;
 
     private float timePassed = 0f;
-    private float keyDelay = 0.2f;
+    private float keyDelay = 1f;
 
     private void Start()
     {
@@ -60,6 +61,8 @@ public class PlayerActions : MonoBehaviour
             isPicked = false;
             timePassed = 0f;
         }
+
+
     }
     private void ItemPlace()
     {
@@ -85,6 +88,7 @@ public class PlayerActions : MonoBehaviour
 
         if (playerMove.forward == Vector3.down)
         {
+            Debug.Log("down");
             origin = new Vector2(transform.position.x, transform.position.y - 2f);
             to = new Vector2(transform.position.x, transform.position.y - howFar);
         }
@@ -140,10 +144,6 @@ public class PlayerActions : MonoBehaviour
             pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
             isPicked = false;
         }
-        // else if(hit.collider!=null)
-        // Debug.Log("wykryto kolizje");
-        //pickedItem.transform.position = to;
-        //pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
 
     }
     private void UseAxe()
@@ -209,17 +209,48 @@ public class PlayerActions : MonoBehaviour
 
     void Weight()
     {
-        if (isPicked)
+        if (isPicked && pickedItem != null)
         {
-            switch (playerMove.name)
+            switch (pickedItem.name)
             {
-                case ("Armchair Variant"):
-                    playerMove.speed = old_speed *0.5f;
-                    Debug.Log("WOLNO");
+                case ("Armchair Variant(Clone)"):
+                    playerMove.speed = old_speed *0.6f;
+                    return;
+                case ("Bathtub Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.5f;
+                    return;
+                case ("Bicycle Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.7f;
+                    return;
+                case ("Fridge Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.5f;
+                    return;
+                case ("Kettle Variant(Clone)"):
+                    playerMove.speed = old_speed;
+                    return;
+                case ("Lamp Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.7f;
+                    return;
+                case ("Lawn Mover Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.6f;
+                    return;
+                case ("Microwave Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.9f;
+                    return;
+                case ("Notebook Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.9f;
+                    return;
+                case ("Stuffed Deer(Clone)"):
+                    playerMove.speed = old_speed * 0.6f;
+                    return;
+                case ("Table Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.6f;
+                    return;
+                case ("TV Variant(Clone)"):
+                    playerMove.speed = old_speed * 0.7f;
                     return;
                 default:
                     playerMove.speed = old_speed;
-                    Debug.Log("NORMALNIE");
                     return;
             }
         }
@@ -232,6 +263,8 @@ public class PlayerActions : MonoBehaviour
 
     private void Update()
     {
+        if(pickedItem!=null)
+            Debug.Log(pickedItem.name);
         timePassed += Time.deltaTime;
 
         if (isPicked == false && playerInput.AButton() && timePassed >= keyDelay)

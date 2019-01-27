@@ -7,6 +7,7 @@ public class ItemScore : HouseState
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayerActions actions = gameObject.GetComponent<PlayerActions>();
         if (gameObject.name == "Player1_ItemLocation")
         {
             if (collision.tag == "Player 1")
@@ -30,6 +31,8 @@ public class ItemScore : HouseState
                 if (isRequired)
                 {
                     gameObject.GetComponent<HouseState>().itemsToLvl.RemoveAt(index);
+                    GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem = null;
+                    //actions.isPicked = false;
                     Destroy(pickedObject);
                     isRequired = false;
                 }
@@ -59,7 +62,8 @@ public class ItemScore : HouseState
                 if (isRequired)
                 {
                     gameObject.GetComponent<HouseState>().itemsToLvl.RemoveAt(index);
-                    GameObject.FindGameObjectWithTag("Player 1").GetComponent<PlayerActions>().pickedItem = null;
+                    GameObject.FindGameObjectWithTag("Player 2").GetComponent<PlayerActions>().pickedItem = null;
+                    //actions.isPicked = false;
                     Destroy(pickedObject);
                     isRequired = false;
                 }
