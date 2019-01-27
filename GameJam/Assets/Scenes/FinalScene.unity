@@ -130317,6 +130317,16 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7340925624448751051, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.33600712
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340925624448751051, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.60798573
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d0c93c6ee3f19240aff7a5c8489dbc8, type: 3}
 --- !u!1001 &1668663321
