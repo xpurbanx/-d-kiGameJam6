@@ -33198,11 +33198,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
-        type: 3}
-      propertyPath: numberOfItems
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: toTimeToDisappear
@@ -33212,6 +33207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fromTimeToDisappear
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
+        type: 3}
+      propertyPath: numberOfItems
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac9f08f50487cb4397bf54323bfbbcd, type: 3}
@@ -48436,11 +48436,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 2383104171052031843, guid: 10fc5066789b5fc4586099bfae6d10d4,
-        type: 3}
-      propertyPath: m_TagString
-      value: House1
-      objectReference: {fileID: 0}
     - target: {fileID: 2383104171052031844, guid: 10fc5066789b5fc4586099bfae6d10d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48460,6 +48455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383104171052031843, guid: 10fc5066789b5fc4586099bfae6d10d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: House1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fc5066789b5fc4586099bfae6d10d4, type: 3}
