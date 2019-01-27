@@ -112,10 +112,13 @@ public class PlayerActions : MonoBehaviour
         if (hit.collider == null)
         {
             Debug.Log("Nie wykryto kolizji");
-            pickedItem.transform.position = to;
-            pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
-            pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
-            isPicked = false;
+            if (pickedItem != null)
+            {
+                pickedItem.transform.position = to;
+                pickedItem.transform.localScale = pickedItem.transform.localScale * (1f / 0.7f);
+                pickedItem.GetComponent<ItemSprite>().spriteRenderer.sprite = pickedItem.GetComponent<ItemSprite>().shadow;
+                isPicked = false;
+            }
         }
 
         else if (hit.collider.tag == "Item")
