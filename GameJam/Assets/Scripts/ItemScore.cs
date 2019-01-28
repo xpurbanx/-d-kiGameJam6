@@ -8,6 +8,9 @@ public class ItemScore : HouseState
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerActions actions = gameObject.GetComponent<PlayerActions>();
+        float mapX = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.x;
+        float mapY = GameObject.FindGameObjectWithTag("Ground").GetComponent<Renderer>().bounds.size.y;
+
         if (gameObject.name == "Player1_ItemLocation")
         {
             if (collision.tag == "Player 1")
@@ -24,6 +27,7 @@ public class ItemScore : HouseState
                         {
                             index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
                             isRequired = true;
+                            GameObject.Find("Item Manager").GetComponent<ItemRequired>().SpawnSlide1(mapX, mapY, 1);
                         }
                     }
                 }
@@ -55,6 +59,7 @@ public class ItemScore : HouseState
                         {
                             index = gameObject.GetComponent<HouseState>().itemsToLvl.IndexOf(item);
                             isRequired = true;
+                            GameObject.Find("Item Manager").GetComponent<ItemRequired>().SpawnSlide2(mapX, mapY, 1);
                         }
                     }
                 }

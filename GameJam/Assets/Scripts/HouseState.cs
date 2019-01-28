@@ -13,7 +13,7 @@ public class HouseState : MonoBehaviour
     void Start()
     {
         level = 1;
-        RequiredItemList(level);
+        RequiredItem(level);
     }
 
     void Update()
@@ -21,7 +21,7 @@ public class HouseState : MonoBehaviour
         if (itemsToLvl.FirstOrDefault() == null)
         {
             LevelUp();
-            RequiredItemList(level);
+            RequiredItem(level);
         }
     }
 
@@ -30,36 +30,12 @@ public class HouseState : MonoBehaviour
         level = level + 1;
     }
 
-    void RequiredItemList(int level)
+    void RequiredItem(int level)
     {
         itemType = GameObject.Find("Item Manager").GetComponent<ItemRequired>().allItems;
 
-        if (level < 6)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                int randomItemType = Random.Range(0, 12);
-                itemsToLvl.Add(itemType[randomItemType]);
-            }
-        }
-
-        else if (level < 11)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                int randomItemType = Random.Range(0, 12);
-                itemsToLvl.Add(itemType[randomItemType]);
-            }
-        }
-
-        else if (level < 16)
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                int randomItemType = Random.Range(0, 12);
-                itemsToLvl.Add(itemType[randomItemType]);
-            }
-        }
+        int randomItemType = Random.Range(0, 12);
+        itemsToLvl.Add(itemType[randomItemType]);
 
         foreach (GameObject item in itemsToLvl)
         {

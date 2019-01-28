@@ -129260,17 +129260,17 @@ PrefabInstance:
     - target: {fileID: 5336162702918149680, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: numberOfItems
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: toTimeToDisappear
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5336162702918149682, guid: 3ac9f08f50487cb4397bf54323bfbbcd,
         type: 3}
       propertyPath: fromTimeToDisappear
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac9f08f50487cb4397bf54323bfbbcd, type: 3}
@@ -129785,6 +129785,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2 Parent
       objectReference: {fileID: 0}
+    - target: {fileID: 4178601269559419662, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178601269559419662, guid: deccaddabf61df44bab48dbfa2bb7fc2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4178601268942740159, guid: deccaddabf61df44bab48dbfa2bb7fc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -129908,6 +129918,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 4868ca2328263924497b1eb3b59d380e, type: 2}
     m_RemovedComponents:
     - {fileID: 4178601270895944073, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
+    - {fileID: 4178601269416639517, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deccaddabf61df44bab48dbfa2bb7fc2, type: 3}
 --- !u!1001 &7340925625030729164
 PrefabInstance:
@@ -129994,6 +130005,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player1 Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215678802485928182, guid: 03552a6e0a78c104f9242d8455f36dfd,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215678802485928182, guid: 03552a6e0a78c104f9242d8455f36dfd,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8215678803218103799, guid: 03552a6e0a78c104f9242d8455f36dfd,
         type: 3}

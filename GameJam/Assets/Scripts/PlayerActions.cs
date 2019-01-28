@@ -220,13 +220,13 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed *0.6f;
                     return;
                 case ("Bathtub Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.5f;
+                    playerMove.speed = old_speed * 0.7f;
                     return;
                 case ("Bicycle Variant(Clone)"):
-                    playerMove.speed = old_speed * 1.2f;
+                    playerMove.speed = old_speed * 1.3f;
                     return;
                 case ("Fridge Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.5f;
+                    playerMove.speed = old_speed * 0.7f;
                     return;
                 case ("Kettle Variant(Clone)"):
                     playerMove.speed = old_speed;
@@ -250,7 +250,7 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed * 0.6f;
                     return;
                 case ("TV Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.7f;
+                    playerMove.speed = old_speed * 0.8f;
                     return;
                 default:
                     playerMove.speed = old_speed;
