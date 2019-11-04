@@ -223,7 +223,7 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed * 0.5f;
                     return;
                 case ("Bicycle Variant(Clone)"):
-                    playerMove.speed = old_speed * 1.2f;
+                    playerMove.speed = old_speed * 1.5f;
                     return;
                 case ("Fridge Variant(Clone)"):
                     playerMove.speed = old_speed * 0.5f;
@@ -232,7 +232,7 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed;
                     return;
                 case ("Lamp Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.7f;
+                    playerMove.speed = old_speed * 0.9f;
                     return;
                 case ("Lawn Mover Variant(Clone)"):
                     playerMove.speed = old_speed * 0.6f;
@@ -244,10 +244,10 @@ public class PlayerActions : MonoBehaviour
                     playerMove.speed = old_speed * 0.9f;
                     return;
                 case ("Stuffed Deer(Clone)"):
-                    playerMove.speed = old_speed * 0.6f;
+                    playerMove.speed = old_speed * 0.7f;
                     return;
                 case ("Table Variant(Clone)"):
-                    playerMove.speed = old_speed * 0.6f;
+                    playerMove.speed = old_speed * 0.7f;
                     return;
                 case ("TV Variant(Clone)"):
                     playerMove.speed = old_speed * 0.7f;

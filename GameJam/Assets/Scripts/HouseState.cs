@@ -27,7 +27,7 @@ public class HouseState : MonoBehaviour
 
     void LevelUp()
     {
-        level = level + 1;
+        level = level + 3;
     }
 
     void RequiredItemList(int level)
@@ -36,7 +36,7 @@ public class HouseState : MonoBehaviour
 
         if (level < 6)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1; i++) // changed from 3 to 1
             {
                 int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
@@ -45,7 +45,7 @@ public class HouseState : MonoBehaviour
 
         else if (level < 11)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 2; i++)// changed from 5 to 2
             {
                 int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
@@ -54,7 +54,7 @@ public class HouseState : MonoBehaviour
 
         else if (level < 16)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 3; i++)// changed from 7 to 3
             {
                 int randomItemType = Random.Range(0, 12);
                 itemsToLvl.Add(itemType[randomItemType]);
